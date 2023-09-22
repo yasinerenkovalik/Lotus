@@ -1,0 +1,15 @@
+/Users/eren/Desktop/LotusApi/Lotus/Application/bin/Debug/net6.0/Application.deps.json
+/Users/eren/Desktop/LotusApi/Lotus/Application/bin/Debug/net6.0/Application.dll
+/Users/eren/Desktop/LotusApi/Lotus/Application/bin/Debug/net6.0/Application.pdb
+/Users/eren/Desktop/LotusApi/Lotus/Application/bin/Debug/net6.0/Domain.dll
+/Users/eren/Desktop/LotusApi/Lotus/Application/bin/Debug/net6.0/Domain.pdb
+/Users/eren/Desktop/LotusApi/Lotus/Application/obj/Debug/net6.0/Application.csproj.AssemblyReference.cache
+/Users/eren/Desktop/LotusApi/Lotus/Application/obj/Debug/net6.0/Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/eren/Desktop/LotusApi/Lotus/Application/obj/Debug/net6.0/Application.AssemblyInfoInputs.cache
+/Users/eren/Desktop/LotusApi/Lotus/Application/obj/Debug/net6.0/Application.AssemblyInfo.cs
+/Users/eren/Desktop/LotusApi/Lotus/Application/obj/Debug/net6.0/Application.csproj.CoreCompileInputs.cache
+/Users/eren/Desktop/LotusApi/Lotus/Application/obj/Debug/net6.0/Application.csproj.CopyComplete
+/Users/eren/Desktop/LotusApi/Lotus/Application/obj/Debug/net6.0/Application.dll
+/Users/eren/Desktop/LotusApi/Lotus/Application/obj/Debug/net6.0/refint/Application.dll
+/Users/eren/Desktop/LotusApi/Lotus/Application/obj/Debug/net6.0/Application.pdb
+/Users/eren/Desktop/LotusApi/Lotus/Application/obj/Debug/net6.0/ref/Application.dll
