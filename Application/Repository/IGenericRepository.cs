@@ -10,6 +10,6 @@ public interface IGenericRepository<T> where T:BaseEntity
     IResult Delete(int id);
     IResult Update(T entity);
     IDataResult<T> Get(int id);
-        List<T> GetAll(Expression<Func<T, bool>> filter = null);
+    IDataResult<List<T>> GetAll(Expression<Func<T, bool>> filter = null);
 
 }

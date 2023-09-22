@@ -1,9 +1,6 @@
 using Application.Repository;
 using Domain;
 using Persistence.Context;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
 using Application.Utilities;
 
@@ -59,15 +56,11 @@ namespace Persistence.Respository
 
         }
 
-        public List<T> GetAll(Expression<Func<T, bool>> filter = null)
+        public IDataResult<List<T>> GetAll(Expression<Func<T, bool>> filter = null)
         {
-           var result=  filter == null ? _postgresContext.Set<T>().ToList() :
-                _postgresContext.Set<T>().Where(filter).ToList();
-           
-           Console.WriteLine(result);
-           return result;
-
+            return new SuccessDataResult<List<T>>(_postgresContext.Set<T>().ToList());
         }
 
+     
     }
 }
