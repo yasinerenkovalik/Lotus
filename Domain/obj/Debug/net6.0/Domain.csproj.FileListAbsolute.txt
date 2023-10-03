@@ -10,3 +10,8 @@
 /Users/eren/Desktop/LotusApi/Lotus/Domain/obj/Debug/net6.0/refint/Domain.dll
 /Users/eren/Desktop/LotusApi/Lotus/Domain/obj/Debug/net6.0/Domain.pdb
 /Users/eren/Desktop/LotusApi/Lotus/Domain/obj/Debug/net6.0/ref/Domain.dll
+/Users/eren/Desktop/LotusApi/Lotus/Domain/bin/Debug/net6.0/Microsoft.AspNetCore.Http.Features.dll
+/Users/eren/Desktop/LotusApi/Lotus/Domain/bin/Debug/net6.0/System.IO.Pipelines.dll
+/Users/eren/Desktop/LotusApi/Lotus/Domain/bin/Debug/net6.0/Microsoft.Extensions.Features.dll
+/Users/eren/Desktop/LotusApi/Lotus/Domain/bin/Debug/net6.0/Microsoft.Net.Http.Headers.dll
+/Users/eren/Desktop/LotusApi/Lotus/Domain/obj/Debug/net6.0/Domain.csproj.CopyComplete

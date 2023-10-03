@@ -2,6 +2,8 @@ using Application;
 using Application.Repository;
 using Application.Utilities;
 using Domain;
+using LotusApi.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace Persistence.Services;
 
@@ -17,40 +19,76 @@ public class ConceptService:IConceptService
     {
         if (entity.Name==null)
         {
-            return new ErrorResult("Konsept Eklenirken Hata Oluştu");
-         
+            return new ErrorResult("Konsept Adı Boş Geçilemez ");
         }
-
-       var result= _conceptRepository.Add(entity);
-       if (result.Success==false)
-       {
-           return new ErrorResult("Konsept Eklenirken başka bir hata");
-       }
-       
+        _conceptRepository.Add(entity);
         return new SuccesResult("Konsept Eklendi");
 
     }
 
     public IResult Delete(int id)
     {
-        throw new NotImplementedException();
+        if (id>0)
+        {
+            return new SuccesResult("Başarılı Bir Şekilde Silindi");
+        }
+        return new ErrorResult();
     }
 
     public IResult Update(Concept entity)
     {
-        throw new NotImplementedException();
+        if (entity.Id > 0)
+        {
+            _conceptRepository.Update(entity);
+            return new SuccesResult("ürün güncellendi");
+        }
+
+        return new ErrorResult("ürün güncellenemedi");
     }
 
     public IDataResult<Concept> Get(int id)
     {
-        throw new NotImplementedException();
+        var result = _conceptRepository.Get(id);
+        if (result.Id<=0)
+        {
+            return new ErrorDataResult<Concept>("Ürün Bulunamadı");
+        }
+
+        return new SuccessDataResult<Concept>(result);
     }
 
     public IDataResult<List<Concept>> GetAll()
     {
       var result=  _conceptRepository.GetAll();
-      
-      Console.WriteLine(result);
-      return new SuccessDataResult<List<Concept>>();
+      return  new SuccessDataResult<List<Concept>>(result);
+    }
+
+    public IResult AddWithImage(AddConseptDto entity)
+    {
+        if (!string.IsNullOrEmpty(entity.Name) )
+        {
+            Concept concept = new Concept();
+            concept.Name = entity.Name;
+            concept.Feature = entity.Feacure;
+            concept.CreatedDate=DateTime.UtcNow;
+            concept.Active = true;
+            using (var memoryStream = new MemoryStream())
+            {
+                entity.Image.CopyTo(memoryStream);
+
+                byte[] bytes = memoryStream.ToArray();
+                string base64String = Convert.ToBase64String(bytes);
+                concept.Image = base64String;
+              
+            }
+   
+           
+            _conceptRepository.AddWithImage(concept);
+            return new SuccesResult("Konsept Başarıyla Eklendi");
+        }
+
+        return new ErrorResult("hata oluşut");
+
+
     }
 }

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Application;
 using Application.Utilities;
 using Domain;
+using LotusApi.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,10 +22,11 @@ namespace LotusApi.Controllers
             _conceptService = conceptService;
         }
 
-        [HttpPost]
-        public Result Add(Concept concept)
+        [HttpPost("add")]
+        public Result Add([FromForm]AddConseptDto  addConseptDto)
         {
-            var result = _conceptService.Add(concept);
+         
+            var result = _conceptService.AddWithImage(addConseptDto);
             if (result.Success == false)
             {
                 return new ErrorResult(result.Message);
@@ -33,16 +35,63 @@ namespace LotusApi.Controllers
             return new SuccesResult(result.Message);
         }
 
-        [HttpGet]
-        public DataResult<List<Concept>> GetAll()
+        [HttpGet("getall")]
+        public IDataResult<List<Concept>> GetAll()
         {
             var result = _conceptService.GetAll();
-            if (result.Success==false)
-            {
-              return  new ErrorDataResult<List<Concept>>(result.Message);
-            }
-
-            return new SuccessDataResult<List<Concept>>(result.Data,result.Message);
+            
+            return  result;
         }
+        [HttpGet("get")]
+        public IDataResult<Concept> Get(int id)
+        {
+            var result = _conceptService.Get(id);
+            
+            return  result;
+        }
+
+        [HttpPost("update")]
+        public IActionResult Update(Concept concept)
+        {
+            var result = _conceptService.Update(concept);
+            return Ok(result);
+        }
+
+        [HttpDelete("delete")]
+        public IActionResult Delete(int id)
+        {
+            var result = _conceptService.Delete(id);
+            return Ok(result);
+        }
+       
+        
+          /*  [HttpPost("upload")]
+            public IActionResult UploadFile(IFormFile file)
+            {
+                try
+                {
+                    if (file == null || file.Length == 0)
+                    {
+                        return BadRequest("Dosya boş veya eksik.");
+                    }
+
+                    using (var memoryStream = new MemoryStream())
+                    {
+                        file.CopyTo(memoryStream);
+
+                        byte[] bytes = memoryStream.ToArray();
+                        string base64String = Convert.ToBase64String(bytes);
+
+                        return Ok(new { Base64String = base64String });
+                    }
+                }
+                catch (Exception ex)
+                {
+                    return StatusCode(500, $"İşlem sırasında bir hata oluştu: {ex.Message}");
+                }
+            }*/
+        }
+
+        
     }
-}
+

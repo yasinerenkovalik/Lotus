@@ -17,3 +17,7 @@
 /Users/eren/Desktop/LotusApi/Lotus/Persistence/obj/Debug/net6.0/Persistence.pdb
 /Users/eren/Desktop/LotusApi/Lotus/Persistence/obj/Debug/net6.0/Persistence.genruntimeconfig.cache
 /Users/eren/Desktop/LotusApi/Lotus/Persistence/obj/Debug/net6.0/ref/Persistence.dll
+/Users/eren/Desktop/LotusApi/Lotus/Persistence/bin/Debug/net6.0/Microsoft.AspNetCore.Http.Features.dll
+/Users/eren/Desktop/LotusApi/Lotus/Persistence/bin/Debug/net6.0/System.IO.Pipelines.dll
+/Users/eren/Desktop/LotusApi/Lotus/Persistence/bin/Debug/net6.0/Microsoft.Extensions.Features.dll
+/Users/eren/Desktop/LotusApi/Lotus/Persistence/bin/Debug/net6.0/Microsoft.Net.Http.Headers.dll

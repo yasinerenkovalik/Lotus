@@ -3,6 +3,7 @@ using Domain;
 using Persistence.Context;
 using System.Linq.Expressions;
 using Application.Utilities;
+using Microsoft.AspNetCore.Http;
 
 namespace Persistence.Respository
 {
@@ -15,50 +16,69 @@ namespace Persistence.Respository
             _postgresContext = postgresContext;
         }
 
-        public IResult Add(T entity)
-        {
-            _postgresContext.Add(entity);
-            _postgresContext.SaveChanges();
-            return new  SuccesResult();
+      
 
+        public string FileUpload(IFormFile file)
+        {
+            try
+            {
+                if (file == null || file.Length == 0)
+                {
+                    return ("Dosya boş veya eksik.");
+                }
+
+                using (var memoryStream = new MemoryStream())
+                {
+                    file.CopyTo(memoryStream);
+
+                    byte[] bytes = memoryStream.ToArray();
+                    string base64String = Convert.ToBase64String(bytes);
+
+                    return  base64String ;
+                }
+            }
+            catch (Exception ex)
+            {
+                return ( $"İşlem sırasında bir hata oluştu: {ex.Message}");
+            }
         }
 
-        public IResult Delete(int id)
+        public void Add(T entity)
+        {
+            
+            _postgresContext.Add(entity);
+            _postgresContext.SaveChanges();
+            
+        }
+
+        public void Delete(int id)
         {
             var entity = _postgresContext.Set<T>().Find(id);
             if (entity != null)
             {
-                _postgresContext.Remove(entity);
+                entity.Active = false;
+                Update(entity);
                 _postgresContext.SaveChanges();
-                return new SuccesResult();
             }
-
-            return new ErrorResult();
         }
 
-        public IResult Update(T entity)
+        public void Update(T entity)
         {
-            if (entity == null)
-            {
-                return new ErrorResult();
-            }
-
+            
             _postgresContext.Update(entity);
             _postgresContext.SaveChanges();
-            return new SuccesResult();
-        }
-
-        public IDataResult<T> Get(int id)
-        {
-           var result= _postgresContext.Set<T>().Find(id);
            
-           return new SuccessDataResult<T>(result);
+        }
+
+        public T Get(int id)
+        {
+            return _postgresContext.Set<T>().Find(id);
 
         }
 
-        public IDataResult<List<T>> GetAll(Expression<Func<T, bool>> filter = null)
+        public List<T> GetAll(Expression<Func<T, bool>> filter = null)
         {
-            return new SuccessDataResult<List<T>>(_postgresContext.Set<T>().ToList());
+            return _postgresContext.Set<T>().ToList();
         }
 
      
