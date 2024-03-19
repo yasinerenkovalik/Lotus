@@ -1,18 +1,18 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 using Application;
 using Application.Utilities;
 using Domain;
 using LotusApi.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LotusApi.Controllers
 {
+   
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ConceptController : ControllerBase
     {
         private readonly IConceptService _conceptService;
@@ -34,7 +34,7 @@ namespace LotusApi.Controllers
 
             return new SuccesResult(result.Message);
         }
-
+        [AllowAnonymous]
         [HttpGet("getall")]
         public IDataResult<List<Concept>> GetAll()
         {
@@ -42,6 +42,8 @@ namespace LotusApi.Controllers
             
             return  result;
         }
+        
+        [AllowAnonymous]
         [HttpGet("get")]
         public IDataResult<Concept> Get(int id)
         {
@@ -56,7 +58,7 @@ namespace LotusApi.Controllers
             var result = _conceptService.Update(concept);
             return Ok(result);
         }
-
+        
         [HttpDelete("delete")]
         public IActionResult Delete(int id)
         {

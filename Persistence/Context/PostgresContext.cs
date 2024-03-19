@@ -12,4 +12,5 @@ public class PostgresContext:DbContext
     }
 
     public DbSet<Concept> Concepts { get; set; }
+    public DbSet<Admin> Admins { get; set; }
 }

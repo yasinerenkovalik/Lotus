@@ -2,7 +2,6 @@ using Application.Repository;
 using Domain;
 using Persistence.Context;
 using System.Linq.Expressions;
-using Application.Utilities;
 using Microsoft.AspNetCore.Http;
 
 namespace Persistence.Respository
@@ -78,8 +77,16 @@ namespace Persistence.Respository
 
         public List<T> GetAll(Expression<Func<T, bool>> filter = null)
         {
-            return _postgresContext.Set<T>().ToList();
+            IQueryable<T> query = _postgresContext.Set<T>();
+
+            if (filter != null)
+            {
+                query = query.Where(filter);
+            }
+
+            return query.ToList();
         }
+
 
      
     }

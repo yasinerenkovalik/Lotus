@@ -14,6 +14,7 @@ public static class ServiceRegistration
         services.AddScoped<PostgresContext>();
         services.AddScoped<IConceptService, ConceptService>();
         services.AddScoped<IConceptRepository, ConceptRepository>();
-
+        services.AddScoped<IAdminRepository, AdminRepository>();
+        services.AddScoped<IAdminService, AdminService>();
     }
 }
