@@ -38,6 +38,7 @@ namespace LotusApi.Controllers
             var result = _adminService.Delete(id);
             if (result.Success==false)
             {
+                
                 return new ErrorResult(result.Message);
             }
             return new SuccesResult(result.Message);
