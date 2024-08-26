@@ -12,7 +12,7 @@ namespace LotusApi.Controllers
    
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+ 
     public class ConceptController : ControllerBase
     {
         private readonly IConceptService _conceptService;
@@ -22,18 +22,51 @@ namespace LotusApi.Controllers
             _conceptService = conceptService;
         }
 
-        [HttpPost("add")]
-        public Result Add([FromForm]AddConseptDto  addConseptDto)
+ 
+        [HttpPost("upload")]
+        public async Task<IActionResult> Upload([FromForm] ImageUploadModel model)
         {
-         
-            var result = _conceptService.AddWithImage(addConseptDto);
-            if (result.Success == false)
-            {
-                return new ErrorResult(result.Message);
-            }
+            var fileNames = new List<string>();
 
-            return new SuccesResult(result.Message);
+            if (model.Images != null && model.Images.Count > 0)
+            {
+                foreach (var image in model.Images)
+                {
+                    // Gün ve ay bilgilerini al
+                    var today = DateTime.Today;
+                    // Fotoğraf adını gün ve ay bilgileri ile oluştur
+                    var fileName = $"{today:yyyyMMdd}-{image.FileName}";
+                    var filePath = Path.Combine("wwwroot/uploads", fileName);
+
+                    // Dosyayı belirtilen dizine kaydet
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await image.CopyToAsync(stream);
+                    }
+
+                    fileNames.Add(fileName);
+                }
+            }
+    
+            var fileNamesString = string.Join(", ", fileNames);
+
+            Concept concept = new Concept
+            {
+                Name = model.Name,
+                Feature = model.Feature,
+                Images = fileNamesString,
+                Title = model.Title,
+                Active = true,
+                CreatedDate = DateTime.Now
+            };
+
+            _conceptService.Add(concept);
+
+            return Ok(new { fileNames = fileNamesString });
         }
+
+
+
         [AllowAnonymous]
         [HttpGet("getall")]
         public IDataResult<List<Concept>> GetAll()
@@ -67,31 +100,7 @@ namespace LotusApi.Controllers
         }
        
         
-          /*  [HttpPost("upload")]
-            public IActionResult UploadFile(IFormFile file)
-            {
-                try
-                {
-                    if (file == null || file.Length == 0)
-                    {
-                        return BadRequest("Dosya boş veya eksik.");
-                    }
-
-                    using (var memoryStream = new MemoryStream())
-                    {
-                        file.CopyTo(memoryStream);
-
-                        byte[] bytes = memoryStream.ToArray();
-                        string base64String = Convert.ToBase64String(bytes);
-
-                        return Ok(new { Base64String = base64String });
-                    }
-                }
-                catch (Exception ex)
-                {
-                    return StatusCode(500, $"İşlem sırasında bir hata oluştu: {ex.Message}");
-                }
-            }*/
+          
         }
 
         

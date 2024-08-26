@@ -70,15 +70,7 @@ namespace Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Image")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Image2")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Image3")
+                    b.Property<string>("Images")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -86,8 +78,9 @@ namespace Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<double>("Price")
-                        .HasColumnType("double precision");
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<DateTime>("UpdateDate")
                         .HasColumnType("timestamp with time zone");

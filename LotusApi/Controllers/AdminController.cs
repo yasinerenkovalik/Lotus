@@ -9,7 +9,7 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace LotusApi.Controllers
 {
-   [Authorize]
+
     [Route("api/[controller]")]
     [ApiController]
     public class AdminController : ControllerBase

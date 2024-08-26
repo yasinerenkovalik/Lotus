@@ -1,11 +1,77 @@
 {
   "Version": 1,
-  "Hash": "I/soyf/04qIdOch7gg8J3F0Pcc4F2d0WojFcwNCDF1E=",
+  "Hash": "QafD9uNc/rVou0LrbedfBMptkQ29/IbPim9il6wuc58=",
   "Source": "LotusApi",
   "BasePath": "_content/LotusApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "LotusApi/wwwroot",
+      "Source": "LotusApi",
+      "ContentRoot": "/Users/yasinerenkovalik/RiderProjects/Lotus/LotusApi/wwwroot/",
+      "BasePath": "_content/LotusApi",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/Users/yasinerenkovalik/RiderProjects/Lotus/LotusApi/wwwroot/uploads/20240826-Screenshot 2024-08-01 at 23.15.53.png",
+      "SourceId": "LotusApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/yasinerenkovalik/RiderProjects/Lotus/LotusApi/wwwroot/",
+      "BasePath": "_content/LotusApi",
+      "RelativePath": "uploads/20240826-Screenshot 2024-08-01 at 23.15.53.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/20240826-Screenshot 2024-08-01 at 23.15.53.png"
+    },
+    {
+      "Identity": "/Users/yasinerenkovalik/RiderProjects/Lotus/LotusApi/wwwroot/uploads/20240826-Screenshot 2024-08-06 at 13.53.16.png",
+      "SourceId": "LotusApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/yasinerenkovalik/RiderProjects/Lotus/LotusApi/wwwroot/",
+      "BasePath": "_content/LotusApi",
+      "RelativePath": "uploads/20240826-Screenshot 2024-08-06 at 13.53.16.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/20240826-Screenshot 2024-08-06 at 13.53.16.png"
+    },
+    {
+      "Identity": "/Users/yasinerenkovalik/RiderProjects/Lotus/LotusApi/wwwroot/uploads/20240826-Screenshot 2024-08-11 at 13.23.10.png",
+      "SourceId": "LotusApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/yasinerenkovalik/RiderProjects/Lotus/LotusApi/wwwroot/",
+      "BasePath": "_content/LotusApi",
+      "RelativePath": "uploads/20240826-Screenshot 2024-08-11 at 13.23.10.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/20240826-Screenshot 2024-08-11 at 13.23.10.png"
+    }
+  ]
 }

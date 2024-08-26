@@ -28,3 +28,16 @@
 /Users/yasineren/RiderProjects/Lotus/Domain/obj/Debug/net6.0/Domain.pdb
 /Users/yasineren/RiderProjects/Lotus/Domain/obj/Debug/net6.0/ref/Domain.dll
 /Users/yasineren/RiderProjects/Lotus/Domain/obj/Debug/net6.0/Domain.sourcelink.json
+/Users/yasinerenkovalik/RiderProjects/Lotus/Domain/bin/Debug/net6.0/Domain.deps.json
+/Users/yasinerenkovalik/RiderProjects/Lotus/Domain/bin/Debug/net6.0/Domain.dll
+/Users/yasinerenkovalik/RiderProjects/Lotus/Domain/bin/Debug/net6.0/Domain.pdb
+/Users/yasinerenkovalik/RiderProjects/Lotus/Domain/obj/Debug/net6.0/Domain.csproj.AssemblyReference.cache
+/Users/yasinerenkovalik/RiderProjects/Lotus/Domain/obj/Debug/net6.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/yasinerenkovalik/RiderProjects/Lotus/Domain/obj/Debug/net6.0/Domain.AssemblyInfoInputs.cache
+/Users/yasinerenkovalik/RiderProjects/Lotus/Domain/obj/Debug/net6.0/Domain.AssemblyInfo.cs
+/Users/yasinerenkovalik/RiderProjects/Lotus/Domain/obj/Debug/net6.0/Domain.csproj.CoreCompileInputs.cache
+/Users/yasinerenkovalik/RiderProjects/Lotus/Domain/obj/Debug/net6.0/Domain.sourcelink.json
+/Users/yasinerenkovalik/RiderProjects/Lotus/Domain/obj/Debug/net6.0/Domain.dll
+/Users/yasinerenkovalik/RiderProjects/Lotus/Domain/obj/Debug/net6.0/refint/Domain.dll
+/Users/yasinerenkovalik/RiderProjects/Lotus/Domain/obj/Debug/net6.0/Domain.pdb
+/Users/yasinerenkovalik/RiderProjects/Lotus/Domain/obj/Debug/net6.0/ref/Domain.dll

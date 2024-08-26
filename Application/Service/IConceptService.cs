@@ -6,5 +6,5 @@ namespace Application;
 
 public interface IConceptService:IGenericService<Concept>
 {
-    IResult AddWithImage(AddConseptDto entity);
+   
 }

@@ -3740,6 +3740,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "6.0.0-preview.4.21253.5",
           "Microsoft.EntityFrameworkCore": "6.0.10",
           "Microsoft.Extensions.DependencyInjection": "6.0.1"
         },
@@ -10912,19 +10913,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/yasineren/.nuget/packages/": {}
+    "/Users/yasinerenkovalik/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/yasineren/RiderProjects/Lotus/LotusApi/LotusApi.csproj",
+      "projectUniqueName": "/Users/yasinerenkovalik/RiderProjects/Lotus/LotusApi/LotusApi.csproj",
       "projectName": "LotusApi",
-      "projectPath": "/Users/yasineren/RiderProjects/Lotus/LotusApi/LotusApi.csproj",
-      "packagesPath": "/Users/yasineren/.nuget/packages/",
-      "outputPath": "/Users/yasineren/RiderProjects/Lotus/LotusApi/obj/",
+      "projectPath": "/Users/yasinerenkovalik/RiderProjects/Lotus/LotusApi/LotusApi.csproj",
+      "packagesPath": "/Users/yasinerenkovalik/.nuget/packages/",
+      "outputPath": "/Users/yasinerenkovalik/RiderProjects/Lotus/LotusApi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/yasineren/.nuget/NuGet/NuGet.Config"
+        "/Users/yasinerenkovalik/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -10936,14 +10937,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/Users/yasineren/RiderProjects/Lotus/Application/Application.csproj": {
-              "projectPath": "/Users/yasineren/RiderProjects/Lotus/Application/Application.csproj"
+            "/Users/yasinerenkovalik/RiderProjects/Lotus/Application/Application.csproj": {
+              "projectPath": "/Users/yasinerenkovalik/RiderProjects/Lotus/Application/Application.csproj"
             },
-            "/Users/yasineren/RiderProjects/Lotus/Infrastrucrure/Infrastrucrure.csproj": {
-              "projectPath": "/Users/yasineren/RiderProjects/Lotus/Infrastrucrure/Infrastrucrure.csproj"
+            "/Users/yasinerenkovalik/RiderProjects/Lotus/Infrastrucrure/Infrastrucrure.csproj": {
+              "projectPath": "/Users/yasinerenkovalik/RiderProjects/Lotus/Infrastrucrure/Infrastrucrure.csproj"
             },
-            "/Users/yasineren/RiderProjects/Lotus/Persistence/Persistence.csproj": {
-              "projectPath": "/Users/yasineren/RiderProjects/Lotus/Persistence/Persistence.csproj"
+            "/Users/yasinerenkovalik/RiderProjects/Lotus/Persistence/Persistence.csproj": {
+              "projectPath": "/Users/yasinerenkovalik/RiderProjects/Lotus/Persistence/Persistence.csproj"
             }
           }
         }
@@ -10989,15 +10990,15 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.26, 6.0.26]"
+            "version": "[6.0.31, 6.0.31]"
           },
           {
             "name": "Microsoft.NETCore.App.Host.osx-arm64",
-            "version": "[6.0.26, 6.0.26]"
+            "version": "[6.0.31, 6.0.31]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.26, 6.0.26]"
+            "version": "[6.0.31, 6.0.31]"
           }
         ],
         "frameworkReferences": {
@@ -11008,7 +11009,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.302/RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -67,53 +67,6 @@ public class ConceptService:IConceptService
 
    
 
-    public IResult AddWithImage(AddConseptDto entity)
-    {
-        if (!string.IsNullOrEmpty(entity.Name) && entity.Image != null)
-        {
-            Concept concept = new Concept();
-            concept.Name = entity.Name;
-            concept.Feature = entity.Feature;
-            concept.CreatedDate = DateTime.UtcNow;
-            concept.Active = true;
-
-            using (var memoryStream = new MemoryStream())
-            {
-                entity.Image.CopyTo(memoryStream);
-                byte[] bytes = memoryStream.ToArray();
-                string base64String = Convert.ToBase64String(bytes);
-                concept.Image = base64String;
-            }
-
-            if (entity.Image2 != null)
-            {
-                using (var memoryStream2 = new MemoryStream())
-                {
-                    entity.Image2.CopyTo(memoryStream2);
-                    byte[] bytes2 = memoryStream2.ToArray();
-                    string base64String2 = Convert.ToBase64String(bytes2);
-                    concept.Image2 = base64String2;
-                }
-            }
-
-            if (entity.Image3 != null)
-            {
-                using (var memoryStream3 = new MemoryStream())
-                {
-                    entity.Image3.CopyTo(memoryStream3);
-                    byte[] bytes3 = memoryStream3.ToArray();
-                    string base64String3 = Convert.ToBase64String(bytes3);
-                    concept.Image3 = base64String3;
-                }
-            }
-
-            _conceptRepository.AddWithImage(concept);
-            return new SuccesResult("Konsept Başarıyla Eklendi");
-        }
-        else
-        {
-            return new ErrorResult("Lütfen geçerli bir isim ve ana resim sağlayın.");
-        }
-    }
+   
 
 }

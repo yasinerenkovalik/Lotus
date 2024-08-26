@@ -14,11 +14,6 @@ public class ConceptRepository : GenericRepository<Concept>, IConceptRepository
         _postgresContext = postgresContext;
     }
 
-    public void AddWithImage(Concept entity)
-    {
-        
-        _postgresContext.Add(entity);
-        _postgresContext.SaveChanges();
-    }
+    
 }
 

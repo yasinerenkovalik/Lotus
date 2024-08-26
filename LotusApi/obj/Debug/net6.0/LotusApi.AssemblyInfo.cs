@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LotusApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+382abb54287aefde61005dbc610dd0101ce0f498")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e3cfccf80ec5c8f6e85a9375c99693e8232df1a")]
 [assembly: System.Reflection.AssemblyProductAttribute("LotusApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LotusApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

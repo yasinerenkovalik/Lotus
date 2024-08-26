@@ -5,5 +5,5 @@ namespace Application.Repository;
 
 public interface IConceptRepository:IGenericRepository<Concept>
 {
-    void AddWithImage(Concept entity);
+   
 } 
